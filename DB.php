@@ -11,7 +11,7 @@ class DB {
 	 * let's use singletone pattern here
 	 */
 	public static function getInstance() {
-		if (null === self::$_instance) {
+		if ( null === self::$_instance ) {
 			self::$_instance = new self();
 		}
 		return self::$_instance;
@@ -40,7 +40,7 @@ class DB {
 		if ( ! $mquery ) {
 			throw new Exception( 'The query failed' );
 		}
-		return mysql_fetch_object($mquery);
+		return mysql_fetch_object( $mquery );
 	}
 
 	/**
