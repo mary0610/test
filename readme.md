@@ -1,8 +1,11 @@
 ###STRUCTURE
 
 T9 class is responsible for a T9 cipher code and search.
-DB class is responsible for all database operations
+
+DB class is responsible for all database operations.
+
 index.php has a user interface, imitation of a keyboard.
+
 MYSQL.sql is a file with the dump of database.
 
 ###TEST DATA
