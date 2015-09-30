@@ -17,17 +17,17 @@ class T9 {
 		$this->number = $_POST['number'];
 		$this->search_string = $_POST['search_string'];
 		$this->keyboard = array(
-			2 => array('a', 'b', 'c'),
-			3 => array('d', 'e', 'f'),
-			4 => array('g', 'h', 'i'),
-			5 => array('j', 'k', 'l'),
-			6 => array('m', 'n', 'o'),
-			7 => array('p', 'q', 'r', 's'),
-			8 => array('t', 'u', 'v'),
-			9 => array('w', 'x', 'y', 'z')
+			2 => array( 'a', 'b', 'c' ),
+			3 => array( 'd', 'e', 'f' ),
+			4 => array( 'g', 'h', 'i' ),
+			5 => array( 'j', 'k', 'l' ),
+			6 => array( 'm', 'n', 'o' ),
+			7 => array( 'p', 'q', 'r', 's' ),
+			8 => array( 't', 'u', 'v' ),
+			9 => array( 'w', 'x', 'y', 'z' )
 		);
 
-		if ( isset($_POST['number'])) {
+		if ( isset( $_POST['number'] ) ) {
 			$this->getSearchSting();
 		}
 
@@ -45,20 +45,20 @@ class T9 {
 			/**
 			 * this is our input string, split into separate digits
 			 */
-			$search = array_map( 'intval', str_split($this->search_string) );
+			$search = array_map( 'intval', str_split( $this->search_string ) );
 			$varNumber = array();
 			/**
 			 * finding out how many combinations of letters we have in total
 			 */
-			foreach ($search as $key => $value) {
-				$varNumber[] = array_product( $varNumber )	* count( $this->keyboard[$value] );
+			foreach ( $search as $key => $value ) {
+				$varNumber[] = array_product( $varNumber ) * count( $this->keyboard[$value] );
 			}
 
 			$letterCombinations = array();
 
 			foreach( $search as $key => $digit ) {
 				$letterIndex = 0;
-				$curLetter  = count($search) - ( $key + ( count($search) - 1 ) );
+				$curLetter  = count( $search ) - ( $key + ( count($search) - 1 ) );
 				$changed = 0;
 
 				/**
