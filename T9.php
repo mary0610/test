@@ -1,5 +1,5 @@
 <?php
-error_reporting( 'E_ALL|E_STRICT' );
+error_reporting( E_ALL | E_STRICT  );
 
 /**
  * Class T9 describes the basic functionaly and T9 algorythm of search.
