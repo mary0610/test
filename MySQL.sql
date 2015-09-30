@@ -10,7 +10,7 @@
  * I used index for 2 fields to have opportunity to search both on the name and last name.
  */
  CREATE DATABASE IF NOT EXISTS `test`
- !40100 DEFAULT CHARACTER SET utf8 COLLATE utf8_bin;
+ /*!40100 DEFAULT CHARACTER SET utf8 COLLATE utf8_bin;*/
  USE `test`;
 
 
